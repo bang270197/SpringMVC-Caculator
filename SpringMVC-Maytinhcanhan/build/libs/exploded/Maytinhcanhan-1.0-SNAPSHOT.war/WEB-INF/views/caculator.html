@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form th:action="@{/caculator}" method="post">
+        <input type="text" name="value1">
+        <input type="text" name="value2">
+        <input type="submit" value="Addition(+)" name="caculator">
+        <input type="submit" value="Subtraction(-)" name="caculator">
+        <input type="submit" value="Multiplication(x)" name="caculator">
+        <input type="submit" value="Division(/)" name="caculator">
+    </form>
+</div>
+<div th:if="${results}">
+    <p th:text="${results}"></p>
+</div>
+</body>
+</html>
